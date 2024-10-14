@@ -1,0 +1,32 @@
+$mobile: " (max-width:767px)";
+$small: 991px;
+
+$mSmall: "(min-width:768px)";
+$mMedium: "(min-width:992px)";
+$mLarge: "(min-width:1200px)";
+
+// Color
+$mainColor: #f00;
+$textColor: #333;
+
+// float
+
+$fLeft: left;
+$fRight: right;
+
+// text align
+
+$tLeft: left;
+$tRight: right;
+
+// show menu
+
+.show {
+  display: block !important;
+}
+
+.text-center-xs {
+  @media #{$mobile} {
+    text-align: center;
+  }
+}

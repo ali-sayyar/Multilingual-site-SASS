@@ -1,0 +1,36 @@
+.main-btn {
+  background-color: rgba($mainColor, 0.8);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $mainColor;
+  }
+}
+
+.toggler {
+  position: absolute;
+  #{$fRight}: 15px;
+  top: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: $mainColor;
+  padding: 5px;
+  @media #{$mSmall} {
+    display: none;
+  }
+  span {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+}

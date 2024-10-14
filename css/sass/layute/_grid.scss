@@ -1,0 +1,21 @@
+* {
+  @include prefixer(box-sizing, border-box);
+}
+
+.container {
+  margin: auto;
+  padding: 0 15px;
+  @media #{$mSmall} {
+    width: 750px;
+  }
+  @media #{$mMedium} {
+    width: 970px;
+  }
+  @media #{$mLarge} {
+    width: 1170px;
+  }
+}
+
+.clearfix {
+  clear: both;
+}

@@ -1,0 +1,97 @@
+.footer {
+  margin-top: 50px;
+  padding: 40px 0 20px;
+  background-color: #ccc;
+  overflow: hidden;
+  .gallery,
+  .info,
+  .contact {
+    @media #{$mSmall} {
+      float: $fLeft;
+    }
+    color: $textColor;
+    .title {
+      color: $textColor;
+      margin-bottom: 20px;
+      font-weight: normal;
+      font-size: 16px;
+    }
+  }
+  .gallery {
+    @media #{$mMedium} {
+      width: 50%;
+    }
+    .box {
+      overflow: hidden;
+      margin-bottom: 20px;
+      img,
+      .text {
+        @media #{$mSmall} {
+          float: $fLeft;
+          width: calc(100% - 180px);
+          margin: 0 15px;
+        }
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .text {
+        h3 {
+          color: $mainColor;
+          margin: 10px 0;
+        }
+        p {
+          color: $textColor;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  .info {
+    @media #{$mSmall} {
+      width: 50%;
+    }
+    @media #{$mMedium} {
+      width: 25%;
+    }
+    .box {
+      margin-bottom: 15px;
+      .email {
+        color: $mainColor;
+      }
+    }
+  }
+  .contact {
+    @media #{$mSmall} {
+      width: 50%;
+    }
+    @media #{$mMedium} {
+      width: 25%;
+    }
+    form {
+      input,
+      textarea {
+        display: block;
+        border: none;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        resize: none;
+        width: 100%;
+      }
+    }
+  }
+  .copyright {
+    border-top: 1px solid #c1c1c1;
+    padding: 20px 0;
+    p {
+      color: $textColor;
+      float: $fLeft;
+      width: 50%;
+    }
+    .last {
+      text-align: $tRight;
+    }
+  }
+}

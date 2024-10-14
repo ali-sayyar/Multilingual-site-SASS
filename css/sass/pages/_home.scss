@@ -1,0 +1,166 @@
+.body-xx {
+  h1 {
+    @media (max-width: $small) {
+      color: blue;
+    }
+    @media #{$mobile} {
+      color: green;
+    }
+    @include LG {
+      color: yellow;
+    }
+  }
+}
+
+@mixin tran($vul...) {
+  -webkit-transition: $vul;
+  -moz-transition: $vul;
+  transition: $vul;
+}
+.ele {
+  @include tran(all 0.3s linear);
+}
+
+.prodect {
+  background-color: #eee;
+  color: #111;
+  width: 200px;
+  padding: 10px;
+  position: relative;
+  @include prefixer(box-shadow, 10px 10px 10px #333, o ms moz webkit);
+  @include prefixer(padding, 10px, o);
+  @include prefixer(animation, fadeInOut 1s, o ms moz webkit);
+  .overlay {
+    @include overlay;
+    background-color: rgba($mainColor, 0.4);
+  }
+}
+
+@include keyF(fadeInOut) {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.slider {
+  text-align: center;
+  margin: 40px 0;
+  blockquote {
+    width: 70%;
+    margin: 0 auto;
+    color: $textColor;
+    line-height: 1.4em;
+    font: {
+      size: 20px;
+      style: italic;
+      weight: bold;
+    }
+  }
+  img {
+    max-width: 100%;
+    margin: 30px 0;
+  }
+  ul {
+    li {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-color: #ccc;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover,
+      &.active {
+        border-color: $textColor;
+      }
+    }
+  }
+}
+
+// services
+
+.services {
+  .service-box {
+    @media #{$mMedium} {
+      float: $fLeft;
+      width: (100% / 3);
+      &:not(:last-of-type) {
+        padding-#{$fRight}: 10px;
+      }
+    }
+    h2 {
+      color: $textColor;
+      i {
+        margin: 0 10px;
+        font: {
+          size: 35px;
+        }
+      }
+    }
+    p {
+      margin: 20px 0;
+      color: $textColor;
+    }
+    a {
+      color: $mainColor;
+    }
+  }
+}
+
+// player
+
+.player {
+  .player-box {
+    padding: 10px;
+    @media #{$mSmall} {
+      float: $fLeft;
+      width: (100% / 2);
+    }
+    @media #{$mMedium} {
+      width: (100% / 5);
+    }
+    img {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: $textColor;
+      font-weight: normal;
+      span {
+        font-weight: bold;
+      }
+    }
+    p {
+      margin: 20px 0;
+      color: $textColor;
+    }
+    a {
+      color: $mainColor;
+    }
+  }
+}
+
+// lorem
+.lorem {
+  .lorem-box {
+    text-align: center;
+    margin: 10px auto;
+    @media #{$mSmall} {
+      float: $fLeft;
+      width: (94% / 3);
+      &:not(:last-of-type) {
+        margin-#{$fRight}: 3%;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
