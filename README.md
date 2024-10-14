@@ -1,2 +1,2 @@
 # Multilingual-site-SASS
-Multilingual website using SASS
+Flexible multilingual website using SASS
